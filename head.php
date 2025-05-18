@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>THE YENNI</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/logo/logo.png"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
-  <meta name="robots" content="all,follow">
-  <title>Admin The Yenni
-  </title>
-  <link rel="icon" href="images/logo.png" sizes="32x32">
-  <!-- inject:css -->
-  <link rel="stylesheet" href="vendors/fomantic-ui/semantic.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
-  <!-- endinject -->
-  <!-- chartjs:css -->
-  <link rel="stylesheet" href="vendors/chart.js/Chart.min.css">
-  <!-- endinject -->
-</head>
+    <!-- CSS
+    ============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/font-awesome.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/slick-theme.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/sal.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/magnific-popup.css" />
+    <link rel="stylesheet" href="../assets/css/vendor/base.css" />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>

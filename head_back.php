@@ -1,22 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-    $("#searchInput").keyup(function() {
-        var query = $(this).val(); // Lấy từ khóa tìm kiếm từ input
-        $.ajax({
-            type: "POST",
-            url: "test_search.php",
-            data: {
-                query: query
-            },
-            success: function(data) {
-                $("#searchResults").html(data);
-            }
-        });
-    });
-});
-</script>
-
 <body class="sticky-header">
     <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
     <!-- Start Mainmenu Area  -->
@@ -41,25 +22,25 @@ $(document).ready(function() {
                                 <img src="../assets/images/logo/login-logo.png" alt="Site Logo" />
                             </a>
                         </div>
-                        <ul class="mainmenu">
-                            <li>
-                                <a href="bookApp.php?act=home">HOME</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">PRODUCT CATEGORIES</a>
-                                <ul class="axil-submenu">
-                                    <?php
-                                        foreach($catalog_use as $catalog){
-                                        if($catalog['display_ctl']==1){
-                            echo '
-                            <li><a href="bookApp.php?act=product_catalog_user&id='.$catalog['id_catalog_k'].'">'.$catalog['catalog_name'].'</a></li>
-                          ';
-                          }
-                        }
-                      ?>
+                            <ul class="mainmenu">
+                                <li>
+                                    <a href="bookApp.php?act=home">HOME</a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">PRODUCT CATEGORIES</a>
+                                    <ul class="axil-submenu">
+                                        <?php
+                            foreach($catalog_use as $catalog){
+                            if($catalog['display_ctl']==1){
+                                echo '
+                                <li><a href="bookApp.php?act=product_catalog_user&id='.$catalog['id_catalog_k'].'">'.$catalog['catalog_name'].'</a></li>
+                            ';
+                            }
+                            }
+                        ?>
                                 </ul>
                             </li>
-                            <li><a href="bookApp.php?act=flash_sale">FLASH_SALE </a></li>
+                            <li><a href="bookApp.php?act=about">PRODUCT</a></li>
                         </ul>
                     </nav>
                     <!-- End Mainmanu Nav -->
@@ -78,31 +59,8 @@ $(document).ready(function() {
                                 <i class="flaticon-magnifying-glass"></i>
                             </a>
                         </li>
-                        <!-- search nav -->
-                        <div class="header-search-modal" id="header-search-modal">
-                            <button class="card-close sidebar-close"><i class="fas fa-times"></i></button>
-                            <div class="header-search-wrap">
-                                <div class="card-header">
-                                    <form action="test_search.php">
-                                        <div class="input-group">
-                                            <input type="text" id="searchInput" class="form-control"
-                                                placeholder="Write Something....">
-                                            <button type="submit" class="axil-btn btn-bg-primary"><i
-                                                    class="far fa-search"></i></button>
-                                        </div>
-                                    </form>
-                                    <div id="searchResults"></div>
-                                </div>
-                                <div class="card-body">
-                                    <div id="searchResults">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Header Search Modal End -->
-                        <!-- end search -->
                         <li class="shopping-cart">
-                            <a id="cart_click" href="#" class="cart-dropdown-btn">
+                            <a id="cart_click" href="wishlist.html" class="cart-dropdown-btn">
                                 <span id="cart-count" class="cart-count"></span>
                                 <i class="flaticon-shopping-cart"></i>
                             </a>
@@ -116,8 +74,7 @@ $(document).ready(function() {
                             xhr.onreadystatechange = function() {
                                 if (xhr.readyState === 4 && xhr.status === 200) {
                                     // Cập nhật giá trị trong thẻ span
-                                    document.getElementById('cart-count').textContent = xhr
-                                        .responseText;
+                                    document.getElementById('cart-count').textContent = xhr.responseText;
                                 }
                             };
                             xhr.send();
